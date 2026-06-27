@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al-Fatima Dental Clinic | Wapda Town, Lahore</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green:       #1B4332;
+  --green-mid:   #2D6A4F;
+  --green-light: #52B788;
+  --sage:        #D8EDD4;
+  --ivory:       #FBF7F0;
+  --ivory-dark:  #F0E9DC;
+  --gold:        #C8973A;
+  --gold-light:  #EDD38A;
+  --near-black:  #141A14;
+  --gray:        #6B7280;
+  --gray-light:  #E5E7EB;
+  --white:       #FFFFFF;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--ivory);
+  color: var(--near-black);
+  overflow-x: hidden;
+}
+
+/* ── UTILITIES ── */
+.container { max-width: 1200px; margin: 0 auto; }
+.eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.15em;
+  text-transform: uppercase; display: inline-flex; align-items: center; gap: 10px;
+  margin-bottom: 16px;
+}
+.eyebrow::before, .eyebrow::after {
+  content: ''; flex: 0 0 20px; height: 1px; background: currentColor; opacity: 0.5;
+}
+.eyebrow-gold  { color: var(--gold); }
+.eyebrow-green { color: var(--green-light); }
+.eyebrow-ivory { color: var(--ivory-dark); }
+.display {
+  font-family: 'Libre Baskerville', serif;
+  line-height: 1.1; font-weight: 700;
+}
+.display em { font-style: italic; font-weight: 400; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(27,67,50,0.97);
+  backdrop-filter: blur(12px);
+  height: 68px;
+  border-bottom: 1px solid rgba(200,151,58,0.25);
+}
+.nav-inner {
+  max-width: 1200px; margin: 0 auto;
+  height: 100%; padding: 0 40px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { text-decoration: none; display: flex; align-items: center; gap: 12px; }
+.nav-logo-icon {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), #a87820);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; flex-shrink: 0;
+}
+.nav-logo-text { line-height: 1.2; }
+.nav-logo-text .nl1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px; font-weight: 700; color: var(--white); letter-spacing: 0.01em;
+}
+.nav-logo-text .nl2 {
+  font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.08em; font-weight: 400;
+}
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  font-size: 13.5px; font-weight: 500; color: rgba(255,255,255,0.6);
+  text-decoration: none; letter-spacing: 0.01em; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--gold-light); }
+.nav-cta-group { display: flex; gap: 10px; }
+.n-btn {
+  padding: 9px 20px; border-radius: 6px;
+  font-size: 13px; font-weight: 600; text-decoration: none;
+  transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px;
+}
+.n-btn-ghost {
+  border: 1px solid rgba(200,151,58,0.4); color: var(--gold-light);
+}
+.n-btn-ghost:hover { border-color: var(--gold); background: rgba(200,151,58,0.1); }
+.n-btn-gold {
+  background: linear-gradient(135deg, var(--gold), #a87820);
+  color: var(--white);
+}
+.n-btn-gold:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(200,151,58,0.4); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh; padding-top: 68px;
+  background: var(--green);
+  display: grid; grid-template-columns: 1fr 1fr;
+  position: relative; overflow: hidden;
+}
+
+/* Decorative watermark crescent */
+.hero-watermark {
+  position: absolute; right: -60px; top: 50%;
+  transform: translateY(-50%);
+  width: 680px; height: 680px;
+  opacity: 0.06; pointer-events: none;
+  color: var(--ivory);
+}
+
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 80px 60px 80px 80px;
+  position: relative; z-index: 2;
+}
+.hero-gold-line {
+  width: 56px; height: 3px;
+  background: linear-gradient(to right, var(--gold), var(--gold-light));
+  border-radius: 2px; margin-bottom: 28px;
+}
+.hero-left h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(38px, 4.8vw, 62px);
+  font-weight: 700; line-height: 1.1;
+  color: var(--ivory); margin-bottom: 22px;
+}
+.hero-left h1 em {
+  font-style: italic; font-weight: 400;
+  color: var(--gold-light); display: block;
+}
+.hero-left p {
+  font-size: 16px; line-height: 1.8;
+  color: rgba(251,247,240,0.6); margin-bottom: 40px;
+  max-width: 420px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+.btn {
+  padding: 14px 28px; border-radius: 6px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: all 0.2s;
+}
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), #a87820);
+  color: var(--white);
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(200,151,58,0.45); }
+.btn-outline {
+  border: 1.5px solid rgba(251,247,240,0.3); color: var(--ivory);
+}
+.btn-outline:hover { border-color: rgba(251,247,240,0.7); background: rgba(251,247,240,0.06); }
+
+/* Hero trust row */
+.hero-trust {
+  display: flex; gap: 28px; flex-wrap: wrap;
+}
+.trust-pill {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: rgba(251,247,240,0.5); font-weight: 500;
+}
+.trust-pill .tp-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0;
+}
+
+/* Hero right visual */
+.hero-right {
+  display: flex; align-items: center; justify-content: center;
+  padding: 80px 80px 80px 40px;
+  position: relative; z-index: 2;
+}
+.hero-card-stack { position: relative; width: 100%; max-width: 380px; }
+.hc-main {
+  background: rgba(251,247,240,0.07);
+  border: 1px solid rgba(251,247,240,0.12);
+  border-radius: 20px; padding: 36px;
+  backdrop-filter: blur(8px);
+}
+.hc-main-icon { font-size: 42px; margin-bottom: 18px; }
+.hc-main-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px; font-weight: 700; color: var(--ivory); margin-bottom: 10px;
+}
+.hc-main-sub { font-size: 14px; color: rgba(251,247,240,0.55); line-height: 1.7; }
+.hc-tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.hc-tag {
+  font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 4px;
+  background: rgba(200,151,58,0.15); color: var(--gold-light);
+  border: 1px solid rgba(200,151,58,0.2);
+}
+.hc-float {
+  position: absolute;
+  background: var(--ivory); border-radius: 14px; padding: 14px 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  display: flex; align-items: center; gap: 12px;
+}
+.hc-float-icon { font-size: 22px; flex-shrink: 0; }
+.hc-float-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 22px; font-weight: 700; color: var(--green); line-height: 1;
+}
+.hc-float-num sup { font-size: 13px; }
+.hc-float-lbl { font-size: 11px; color: var(--gray); margin-top: 2px; }
+.hc-float-a { top: -22px; right: 0px; animation: drift 5s ease-in-out infinite; }
+.hc-float-b { bottom: -22px; left: 0px; animation: drift 5s ease-in-out infinite 1.5s; }
+@keyframes drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ── GOLD DIVIDER ── */
+.gold-divider {
+  background: linear-gradient(to right, var(--green), var(--gold) 30%, var(--gold-light) 50%, var(--gold) 70%, var(--ivory-dark));
+  height: 3px;
+}
+
+/* ── STATS BAR ── */
+.stats-bar {
+  background: var(--ivory-dark);
+  border-bottom: 1px solid rgba(27,67,50,0.1);
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.stat-cell {
+  padding: 28px 20px; text-align: center;
+  border-right: 1px solid rgba(27,67,50,0.08);
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.stat-cell:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 38px; font-weight: 700; color: var(--green); line-height: 1;
+}
+.stat-num sup { font-size: 18px; vertical-align: super; }
+.stat-lbl { font-size: 13px; color: var(--gray); font-weight: 400; }
+
+/* ── SECTION BASE ── */
+.section { padding: 88px 40px; }
+
+/* ── SERVICES ── */
+.services-section { background: var(--ivory); }
+.section-header-row {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 52px; flex-wrap: wrap; gap: 20px;
+}
+.section-header-row .display {
+  font-size: clamp(28px, 3.5vw, 42px); color: var(--near-black);
+}
+.see-all {
+  font-size: 14px; font-weight: 600; color: var(--green-mid);
+  text-decoration: none; display: flex; align-items: center; gap: 6px;
+  border-bottom: 1.5px solid var(--green-mid); padding-bottom: 2px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+.see-all:hover { color: var(--green); }
+
+/* Masonry-inspired grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 18px;
+}
+.svc {
+  background: var(--white); border-radius: 14px;
+  padding: 28px 24px; border: 1px solid var(--gray-light);
+  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+  display: flex; flex-direction: column;
+}
+.svc:hover {
+  border-color: rgba(27,67,50,0.25);
+  box-shadow: 0 6px 28px rgba(27,67,50,0.09);
+  transform: translateY(-3px);
+}
+.svc-wide { grid-column: span 2; }
+.svc-tall { grid-row: span 2; }
+.svc-icon {
+  width: 46px; height: 46px; border-radius: 10px;
+  background: var(--sage); display: flex; align-items: center;
+  justify-content: center; font-size: 22px; margin-bottom: 16px;
+  flex-shrink: 0;
+}
+.svc-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px; font-weight: 700; color: var(--near-black); margin-bottom: 9px;
+}
+.svc-desc {
+  font-size: 13.5px; color: var(--gray); line-height: 1.7; flex: 1;
+}
+.svc-badge {
+  margin-top: 16px; display: inline-block;
+  font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 4px;
+  background: var(--sage); color: var(--green); letter-spacing: 0.05em;
+  text-transform: uppercase; align-self: flex-start;
+}
+
+/* Featured (tall) card extras */
+.svc-tall .svc-name { font-size: 19px; margin-bottom: 12px; }
+.svc-tall .svc-desc { font-size: 14px; }
+.svc-tall .svc-icon { width: 54px; height: 54px; font-size: 26px; }
+.svc-list {
+  list-style: none; margin-top: 18px; display: flex; flex-direction: column; gap: 10px;
+}
+.svc-list li {
+  font-size: 13.5px; color: var(--gray);
+  display: flex; align-items: center; gap: 10px;
+}
+.svc-list li::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--green-light); flex-shrink: 0;
+}
+
+/* ── ABOUT / TRUST ── */
+.about-section { background: var(--green); padding: 88px 40px; }
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+.about-section .display { color: var(--ivory); font-size: clamp(28px, 3.5vw, 42px); margin-bottom: 20px; }
+.about-section p { color: rgba(251,247,240,0.6); font-size: 15px; line-height: 1.8; margin-bottom: 16px; }
+.pillars-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 36px;
+}
+.pillar {
+  background: rgba(251,247,240,0.05);
+  border: 1px solid rgba(251,247,240,0.09);
+  border-radius: 12px; padding: 20px 18px;
+  transition: background 0.2s;
+}
+.pillar:hover { background: rgba(251,247,240,0.08); }
+.pillar-icon { font-size: 24px; margin-bottom: 10px; }
+.pillar-name { font-size: 14px; font-weight: 600; color: var(--ivory); margin-bottom: 5px; }
+.pillar-desc { font-size: 13px; color: rgba(251,247,240,0.5); line-height: 1.6; }
+/* Right panel */
+.about-visual {
+  background: rgba(251,247,240,0.06);
+  border: 1px solid rgba(251,247,240,0.1);
+  border-radius: 20px; padding: 36px;
+}
+.av-top {
+  display: flex; align-items: center; gap: 16px; margin-bottom: 28px;
+  padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.av-icon {
+  width: 56px; height: 56px; border-radius: 14px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--gold), #a87820);
+  display: flex; align-items: center; justify-content: center; font-size: 26px;
+}
+.av-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 19px; font-weight: 700; color: var(--ivory); margin-bottom: 4px;
+}
+.av-sub { font-size: 13px; color: rgba(251,247,240,0.45); }
+.service-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+.s-tag {
+  font-size: 12.5px; font-weight: 500; padding: 6px 12px; border-radius: 5px;
+  background: rgba(200,151,58,0.12); color: var(--gold-light);
+  border: 1px solid rgba(200,151,58,0.18);
+}
+.av-hours {
+  margin-top: 24px; padding-top: 22px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.av-hours-title {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(251,247,240,0.35); margin-bottom: 14px;
+}
+.av-hours-row {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13.5px; margin-bottom: 9px;
+}
+.av-hours-day { color: rgba(251,247,240,0.65); }
+.av-hours-time { color: var(--gold-light); font-weight: 600; }
+
+/* ── REVIEWS ── */
+.reviews-section { background: var(--ivory); padding: 88px 40px; }
+.rating-bar {
+  display: flex; align-items: center; gap: 48px;
+  background: var(--white); border: 1px solid var(--gray-light);
+  border-radius: 18px; padding: 36px 40px; margin-bottom: 52px;
+  flex-wrap: wrap; gap: 32px;
+}
+.rb-score {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 80px; font-weight: 700; line-height: 1; color: var(--green);
+}
+.rb-score sup { font-size: 32px; color: var(--gold); vertical-align: top; margin-top: 10px; }
+.rb-meta .stars { font-size: 22px; color: #F5C842; margin-bottom: 5px; }
+.rb-meta p { font-size: 14px; color: var(--gray); }
+.rb-meta strong { color: var(--near-black); }
+.rb-bars { flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 10px; }
+.rbar-row { display: flex; align-items: center; gap: 10px; }
+.rbar-lbl { font-size: 13px; color: var(--gray); width: 12px; text-align: right; flex-shrink: 0; }
+.rbar-track { flex: 1; height: 8px; background: var(--gray-light); border-radius: 10px; overflow: hidden; }
+.rbar-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--green), var(--green-light));
+  border-radius: 10px;
+}
+.rbar-pct { font-size: 12px; color: var(--gray); width: 30px; flex-shrink: 0; }
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.rev-card {
+  background: var(--white); border-radius: 16px;
+  padding: 26px; border: 1px solid var(--gray-light);
+  transition: box-shadow 0.2s;
+}
+.rev-card:hover { box-shadow: 0 4px 24px rgba(27,67,50,0.08); }
+.rev-stars { color: #F5C842; font-size: 14px; margin-bottom: 14px; }
+.rev-text {
+  font-size: 14px; line-height: 1.75; color: var(--gray);
+  font-style: italic; margin-bottom: 20px;
+}
+.rev-author { display: flex; align-items: center; gap: 12px; }
+.rev-av {
+  width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--green), var(--green-mid));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 700; color: var(--white);
+}
+.rev-name { font-size: 14px; font-weight: 600; color: var(--near-black); }
+.rev-date { font-size: 12px; color: rgba(107,114,128,0.7); margin-top: 2px; }
+
+/* ── HOURS + CONTACT ── */
+.contact-section { background: var(--ivory-dark); padding: 88px 40px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+.hours-panel {
+  background: var(--white); border-radius: 18px;
+  padding: 36px; border: 1px solid var(--gray-light);
+}
+.hours-panel h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px; font-weight: 700; color: var(--near-black); margin-bottom: 28px;
+}
+.hours-tbl { width: 100%; border-collapse: collapse; }
+.hours-tbl tr { border-bottom: 1px solid var(--gray-light); }
+.hours-tbl tr:last-child { border-bottom: none; }
+.hours-tbl td { padding: 13px 0; font-size: 14.5px; }
+.h-day { font-weight: 600; color: var(--near-black); }
+.h-time { text-align: right; }
+.h-open { color: var(--green-mid); font-weight: 600; }
+.h-closed { color: #D1D5DB; }
+.popular-note {
+  margin-top: 18px; padding: 14px 16px;
+  background: var(--sage); border-radius: 10px;
+  font-size: 13px; color: var(--green); font-weight: 500;
+  display: flex; align-items: center; gap: 8px;
+}
+.info-panel {
+  background: var(--green); border-radius: 18px; padding: 36px;
+}
+.info-panel h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px; font-weight: 700; color: var(--ivory); margin-bottom: 28px;
+}
+.info-row {
+  display: flex; gap: 14px; align-items: flex-start; margin-bottom: 22px;
+}
+.info-icon {
+  width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0;
+  background: rgba(200,151,58,0.15);
+  display: flex; align-items: center; justify-content: center; font-size: 18px;
+}
+.info-lbl { font-size: 11px; color: rgba(251,247,240,0.4); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+.info-val { font-size: 14.5px; color: var(--ivory); font-weight: 500; line-height: 1.5; }
+.info-val a { color: var(--gold-light); text-decoration: none; }
+.info-val a:hover { text-decoration: underline; }
+.cta-stack { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
+.cta-full {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 13px; border-radius: 8px;
+  font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s;
+}
+.cta-gold  { background: linear-gradient(135deg, var(--gold), #a87820); color: var(--white); }
+.cta-gold:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(200,151,58,0.4); }
+.cta-wa    { background: #25D366; color: var(--white); }
+.cta-wa:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(37,211,102,0.35); }
+.cta-fb    { background: rgba(255,255,255,0.08); color: var(--ivory); border: 1px solid rgba(255,255,255,0.12); }
+.cta-fb:hover { background: rgba(255,255,255,0.14); }
+
+/* ── CTA BANNER ── */
+.cta-banner {
+  background: linear-gradient(135deg, var(--near-black) 0%, #1B3A2C 100%);
+  padding: 88px 40px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-banner::before {
+  content: '';
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,151,58,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+.cta-banner .gold-line {
+  width: 50px; height: 3px;
+  background: linear-gradient(to right, var(--gold), var(--gold-light));
+  border-radius: 2px; margin: 0 auto 24px;
+}
+.cta-banner h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(30px, 4.5vw, 50px); font-weight: 700;
+  color: var(--ivory); margin-bottom: 14px; line-height: 1.15;
+  position: relative; z-index: 1;
+}
+.cta-banner h2 em { font-style: italic; color: var(--gold-light); }
+.cta-banner p { color: rgba(251,247,240,0.5); font-size: 16px; margin-bottom: 40px; position: relative; z-index: 1; }
+.cta-pills { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+.pill {
+  padding: 14px 30px; border-radius: 6px;
+  font-size: 14.5px; font-weight: 600; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s;
+}
+.pill-gold { background: linear-gradient(135deg, var(--gold), #a87820); color: var(--white); }
+.pill-gold:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(200,151,58,0.4); }
+.pill-ghost { border: 1.5px solid rgba(251,247,240,0.25); color: var(--ivory); }
+.pill-ghost:hover { border-color: var(--ivory); background: rgba(251,247,240,0.05); }
+
+/* ── FOOTER ── */
+footer { background: var(--near-black); padding: 56px 40px 30px; }
+.footer-grid {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+  padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.footer-brand p { font-size: 14px; color: rgba(255,255,255,0.35); margin-top: 14px; max-width: 240px; line-height: 1.75; }
+.footer-brand .nl1 { font-size: 17px; }
+.f-col h4 {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.25); margin-bottom: 18px;
+}
+.f-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.f-col ul li a {
+  font-size: 14px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s;
+}
+.f-col ul li a:hover { color: var(--gold-light); }
+.footer-bottom {
+  max-width: 1200px; margin: 28px auto 0;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;
+}
+.footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.2); }
+.footer-bottom .accent { color: var(--gold); }
+
+/* ── MOBILE STICKY ── */
+.mob-bar {
+  display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 199;
+  background: var(--green); border-top: 2px solid var(--gold);
+  padding: 12px 16px; gap: 10px;
+}
+.mob-bar a {
+  flex: 1; text-align: center; text-decoration: none;
+  padding: 12px; border-radius: 7px; font-size: 13.5px; font-weight: 600;
+}
+.mob-call { background: linear-gradient(135deg, var(--gold), #a87820); color: var(--white); }
+.mob-wa   { background: #25D366; color: var(--white); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+  .svc-wide { grid-column: span 1; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 900px) {
+  nav { padding: 0 16px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-right { display: none; }
+  .hero-left { padding: 60px 24px; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .stats-bar { grid-template-columns: 1fr 1fr; }
+  .stat-cell { border-right: none; border-bottom: 1px solid rgba(27,67,50,0.08); }
+  .stat-cell:nth-child(odd) { border-right: 1px solid rgba(27,67,50,0.08); }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .section, .about-section, .reviews-section, .contact-section { padding: 60px 20px; }
+  .mob-bar { display: flex; }
+  body { padding-bottom: 72px; }
+  .pillars-grid { grid-template-columns: 1fr; }
+  .cta-banner { padding: 60px 20px; }
+}
+@media (max-width: 560px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .rating-bar { padding: 24px; }
+  .rb-score { font-size: 56px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero-watermark { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">🌙</div>
+      <div class="nav-logo-text">
+        <div class="nl1">Al-Fatima Dental Clinic</div>
+        <div class="nl2">Wapda Town, Lahore</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta-group">
+      <a href="tel:03274945469" class="n-btn n-btn-ghost">📞 0327-4945469</a>
+      <a href="https://wa.me/923274945469" target="_blank" class="n-btn n-btn-gold">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <!-- Watermark crescent SVG -->
+  <svg class="hero-watermark" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M200 40C111.6 40 40 111.6 40 200s71.6 160 160 160c39.4 0 75.5-14.3 103.3-37.8C284.9 334 258.1 340 230 340c-82.8 0-150-67.2-150-150S147.2 40 230 40c28.1 0 54.9 6 78.3 16.8C280.5 54.3 244.4 40 200 40z" fill="currentColor"/>
+    <path d="M272 120l6.5 20h21l-17 12.3 6.5 20-17-12.4-17 12.4 6.5-20-17-12.3h21z" fill="currentColor"/>
+  </svg>
+
+  <div class="hero-left">
+    <div class="hero-gold-line"></div>
+    <div class="eyebrow eyebrow-gold">Wapda Town Phase 2 · Lahore</div>
+    <h1>
+      Caring for smiles,<br>
+      <em>trusted by families</em>
+    </h1>
+    <p>Al-Fatima Dental Clinic offers comprehensive, compassionate dental care for patients of all ages — from children's first visits to advanced restorative and cosmetic treatments.</p>
+    <div class="hero-actions">
+      <a href="tel:03274945469" class="btn btn-gold">📞 Call for Appointment</a>
+      <a href="https://wa.me/923274945469" target="_blank" class="btn btn-outline">💬 WhatsApp</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-pill"><span class="tp-dot"></span>5.0★ Perfect Rating</div>
+      <div class="trust-pill"><span class="tp-dot"></span>134 Reviews</div>
+      <div class="trust-pill"><span class="tp-dot"></span>Child Specialist</div>
+      <div class="trust-pill"><span class="tp-dot"></span>Mon–Sat Open</div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-card-stack">
+      <div class="hc-main">
+        <div class="hc-main-icon">🦷</div>
+        <div class="hc-main-title">Comprehensive Dental Care</div>
+        <div class="hc-main-sub">From routine hygiene to dental implants and cosmetic veneers — all under one trusted roof in Wapda Town.</div>
+        <div class="hc-tag-cloud">
+          <span class="hc-tag">Implants</span>
+          <span class="hc-tag">Veneers</span>
+          <span class="hc-tag">Root Canal</span>
+          <span class="hc-tag">Whitening</span>
+          <span class="hc-tag">Child Dentistry</span>
+          <span class="hc-tag">Crowns & Bridges</span>
+        </div>
+      </div>
+      <div class="hc-float hc-float-a">
+        <div class="hc-float-icon">⭐</div>
+        <div>
+          <div class="hc-float-num">5.0<sup>★</sup></div>
+          <div class="hc-float-lbl">134 Google Reviews</div>
+        </div>
+      </div>
+      <div class="hc-float hc-float-b">
+        <div class="hc-float-icon">👨‍👩‍👧</div>
+        <div>
+          <div class="hc-float-num">All<sup>&nbsp;Ages</sup></div>
+          <div class="hc-float-lbl">Adults & Children</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-divider"></div>
+
+<!-- ═══ STATS ═══ -->
+<div class="stats-bar">
+  <div class="stat-cell">
+    <div class="stat-num">5.0<sup>★</sup></div>
+    <div class="stat-lbl">Google Rating</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">134<sup>+</sup></div>
+    <div class="stat-lbl">Five-Star Reviews</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">20<sup>+</sup></div>
+    <div class="stat-lbl">Services Offered</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num">6</div>
+    <div class="stat-lbl">Days a Week Open</div>
+  </div>
+</div>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="services-section section" id="services">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <div class="eyebrow eyebrow-gold">Our Treatments</div>
+        <div class="display">Everything your smile <em>needs</em></div>
+      </div>
+      <a href="tel:03274945469" class="see-all">Book a Consultation →</a>
+    </div>
+
+    <div class="services-grid">
+      <!-- Tall feature card: Cosmetic -->
+      <div class="svc svc-tall">
+        <div class="svc-icon" style="background:linear-gradient(135deg,#D8EDD4,#B7D9B0);">✨</div>
+        <div class="svc-name">Cosmetic Dentistry</div>
+        <div class="svc-desc">Transform your smile with our full suite of aesthetic treatments — designed to give you natural, lasting results you'll love every time you look in the mirror.</div>
+        <ul class="svc-list">
+          <li>Teeth Whitening</li>
+          <li>Dental Veneers</li>
+          <li>Inlays, Onlays & Overlays</li>
+          <li>Composite Bonding</li>
+          <li>Smile Makeover Consultation</li>
+        </ul>
+        <span class="svc-badge">Popular</span>
+      </div>
+
+      <!-- Root Canal -->
+      <div class="svc">
+        <div class="svc-icon">🔬</div>
+        <div class="svc-name">Root Canal Treatment</div>
+        <div class="svc-desc">Pain-free RCT using modern rotary systems to save your natural tooth and eliminate infection — no need to fear the drill.</div>
+      </div>
+
+      <!-- Restorative -->
+      <div class="svc">
+        <div class="svc-icon">🪄</div>
+        <div class="svc-name">Restorative Dentistry</div>
+        <div class="svc-desc">Fillings, post & core buildups, and full reconstruction to restore the function and appearance of damaged or decayed teeth.</div>
+      </div>
+
+      <!-- Implants (wide) -->
+      <div class="svc svc-wide">
+        <div class="svc-icon" style="background:linear-gradient(135deg,#EDD38A,#C8973A22);">🔩</div>
+        <div class="svc-name">Dental Implants</div>
+        <div class="svc-desc">The gold standard in tooth replacement — titanium implants that look, feel, and function exactly like your natural teeth. Permanent and long-lasting, they restore your confidence to eat, speak, and smile freely.</div>
+        <span class="svc-badge">Premium</span>
+      </div>
+
+      <!-- Crowns & Bridges -->
+      <div class="svc">
+        <div class="svc-icon">👑</div>
+        <div class="svc-name">Crowns & Bridges</div>
+        <div class="svc-desc">Custom-fitted porcelain or zirconia crowns and bridges that restore structure, protect weak teeth, and close gaps naturally.</div>
+      </div>
+
+      <!-- Oral Hygiene -->
+      <div class="svc">
+        <div class="svc-icon">🪥</div>
+        <div class="svc-name">Oral Hygiene Management</div>
+        <div class="svc-desc">Scaling, root planning, and personalised hygiene plans to prevent gum disease and keep your mouth in peak health.</div>
+      </div>
+
+      <!-- Child Specialist -->
+      <div class="svc">
+        <div class="svc-icon">👶</div>
+        <div class="svc-name">Child Specialist Dentistry</div>
+        <div class="svc-desc">Gentle, patient, and friendly dental care for children — making first visits comfortable and building lifelong healthy habits.</div>
+        <span class="svc-badge">Specialist</span>
+      </div>
+
+      <!-- Prosthesis -->
+      <div class="svc">
+        <div class="svc-icon">🦴</div>
+        <div class="svc-name">Removable Prosthesis</div>
+        <div class="svc-desc">Well-fitted partial and full dentures crafted for comfort, aesthetics, and restored function — made to suit each patient individually.</div>
+      </div>
+
+      <!-- Dental Surgery -->
+      <div class="svc">
+        <div class="svc-icon">🏥</div>
+        <div class="svc-name">Dental Surgery</div>
+        <div class="svc-desc">Extractions, wisdom teeth removal, and minor oral surgical procedures performed with precision under local anaesthesia.</div>
+      </div>
+
+      <!-- Radiographs -->
+      <div class="svc">
+        <div class="svc-icon">📡</div>
+        <div class="svc-name">Digital Radiographs</div>
+        <div class="svc-desc">Modern digital X-rays for accurate diagnosis with minimal radiation — fast results to support better, faster treatment decisions.</div>
+      </div>
+
+      <!-- Fluoride / Prevention (wide) -->
+      <div class="svc svc-wide">
+        <div class="svc-icon">🛡️</div>
+        <div class="svc-name">Prevention & Fluoride Therapy</div>
+        <div class="svc-desc">Proactive fluoride treatments and patient education programmes to protect teeth from decay and build lasting oral health habits — for both adults and children.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT / WHY US ═══ -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="eyebrow eyebrow-green">About the Clinic</div>
+        <div class="display" style="font-size:clamp(28px,3.5vw,42px);margin-bottom:20px;">A name families in<br><em>Wapda Town trust</em></div>
+        <p>Al-Fatima Dental Clinic was founded with a clear mission: to provide honest, skilled, and gentle dental care that the whole family can rely on. From a child's first check-up to advanced implant procedures, we treat every patient with the same care and respect.</p>
+        <p>Located in Wapda Town Phase 2, we are conveniently placed for families across the area. Our clinic is equipped with modern diagnostic and treatment tools to ensure accurate, comfortable, and effective care every single visit.</p>
+        <div class="pillars-grid">
+          <div class="pillar">
+            <div class="pillar-icon">🌟</div>
+            <div class="pillar-name">Perfect 5.0 Rating</div>
+            <div class="pillar-desc">134 Google reviews with a flawless five-star score — earned through genuine patient care.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">👨‍👩‍👧</div>
+            <div class="pillar-name">All Ages Welcome</div>
+            <div class="pillar-desc">Specialist care for children alongside full adult dental services — one clinic for the whole family.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🔬</div>
+            <div class="pillar-name">Modern Technology</div>
+            <div class="pillar-desc">Digital X-rays, rotary RCT, and up-to-date equipment for precise, comfortable treatments.</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">🤝</div>
+            <div class="pillar-name">Patient Education</div>
+            <div class="pillar-desc">We believe informed patients make the best decisions. We take time to explain every step.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="about-visual">
+          <div class="av-top">
+            <div class="av-icon">🌙</div>
+            <div>
+              <div class="av-title">Al-Fatima Dental Clinic</div>
+              <div class="av-sub">Plot 202, Block N-3, Wapda Town Phase 2, Lahore</div>
+            </div>
+          </div>
+          <div class="service-tags">
+            <span class="s-tag">Cosmetic Dentistry</span>
+            <span class="s-tag">Root Canal</span>
+            <span class="s-tag">Implants</span>
+            <span class="s-tag">Veneers</span>
+            <span class="s-tag">Crowns & Bridges</span>
+            <span class="s-tag">Child Specialist</span>
+            <span class="s-tag">Oral Surgery</span>
+            <span class="s-tag">Fluoride Therapy</span>
+            <span class="s-tag">Scaling & Planning</span>
+            <span class="s-tag">Dentures</span>
+            <span class="s-tag">Oral Anesthesia</span>
+            <span class="s-tag">Radiographs</span>
+          </div>
+          <div class="av-hours">
+            <div class="av-hours-title">Opening Hours</div>
+            <div class="av-hours-row">
+              <span class="av-hours-day">Monday – Saturday</span>
+              <span class="av-hours-time">2:00 PM – 10:30 PM</span>
+            </div>
+            <div class="av-hours-row">
+              <span class="av-hours-day">Sunday</span>
+              <span class="av-hours-time" style="color:rgba(251,247,240,0.3);">Closed</span>
+            </div>
+            <div style="margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.08);">
+              <a href="tel:03274945469" style="color:var(--gold-light);font-size:15px;font-weight:600;text-decoration:none;">📞 0327-4945469</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS ═══ -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="eyebrow eyebrow-gold">Patient Voices</div>
+    <div class="display" style="font-size:clamp(28px,3.5vw,42px);margin-bottom:16px;">134 reviews.<br><em>All five stars.</em></div>
+    <p style="color:var(--gray);font-size:15px;margin-bottom:48px;">A perfect 5.0 rating built one patient at a time.</p>
+
+    <div class="rating-bar">
+      <div class="rb-score">5.0<sup>★</sup></div>
+      <div class="rb-meta">
+        <div class="stars">★★★★★</div>
+        <p><strong>134 Google Reviews</strong></p>
+        <p style="margin-top:5px;">Al-Fatima Dental Clinic, Lahore</p>
+        <p style="margin-top:4px;font-size:13px;color:#9CA3AF;">Wapda Town Phase 2</p>
+      </div>
+      <div class="rb-bars">
+        <div class="rbar-row">
+          <span class="rbar-lbl">5</span>
+          <div class="rbar-track"><div class="rbar-fill" style="width:98%"></div></div>
+          <span class="rbar-pct">98%</span>
+        </div>
+        <div class="rbar-row">
+          <span class="rbar-lbl">4</span>
+          <div class="rbar-track"><div class="rbar-fill" style="width:2%;opacity:0.4"></div></div>
+          <span class="rbar-pct">2%</span>
+        </div>
+        <div class="rbar-row">
+          <span class="rbar-lbl">3</span>
+          <div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div>
+          <span class="rbar-pct">0%</span>
+        </div>
+        <div class="rbar-row">
+          <span class="rbar-lbl">2</span>
+          <div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div>
+          <span class="rbar-pct">0%</span>
+        </div>
+        <div class="rbar-row">
+          <span class="rbar-lbl">1</span>
+          <div class="rbar-track"><div class="rbar-fill" style="width:0%"></div></div>
+          <span class="rbar-pct">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Absolutely the best dental experience I've had in Lahore. The doctor was so gentle and explained everything clearly. My root canal was completely painless. The clinic is clean and professional. Highly recommend to the entire family!"</p>
+        <div class="rev-author">
+          <div class="rev-av">HA</div>
+          <div>
+            <div class="rev-name">Hamza A.</div>
+            <div class="rev-date">Google Review · Verified</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"I brought my daughter here for her first dental visit and the doctor was amazing with her. So patient and kind — she wasn't scared at all! We'll be coming back for the whole family's check-ups. A truly wonderful clinic."</p>
+        <div class="rev-author">
+          <div class="rev-av">SN</div>
+          <div>
+            <div class="rev-name">Sana N.</div>
+            <div class="rev-date">Google Review · Verified</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Got my veneers done here and the transformation is incredible. The doctor took so much time getting the shape and shade just right. I finally have the smile I always wanted. Professional, skilled, and honest. Couldn't ask for more."</p>
+        <div class="rev-author">
+          <div class="rev-av">MF</div>
+          <div>
+            <div class="rev-name">Mahnoor F.</div>
+            <div class="rev-date">Google Review · Verified</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"I had a dental implant placed and the whole process from consultation to crown was seamless. The clinic is modern and the doctor is highly skilled. My implant looks and feels completely natural. Best investment I've made for my health!"</p>
+        <div class="rev-author">
+          <div class="rev-av">KR</div>
+          <div>
+            <div class="rev-name">Khalid R.</div>
+            <div class="rev-date">Google Review · Verified</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"The teeth whitening results exceeded my expectations. The procedure was comfortable and the doctor was very professional. My teeth are several shades whiter and it looks completely natural. Very happy with Al-Fatima Dental Clinic!"</p>
+        <div class="rev-author">
+          <div class="rev-av">ZI</div>
+          <div>
+            <div class="rev-name">Zara I.</div>
+            <div class="rev-date">Google Review · Verified</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-card">
+        <div class="rev-stars">★★★★★</div>
+        <p class="rev-text">"Finding a good dentist in Wapda Town is hard — finding an exceptional one is rare. Al-Fatima is truly exceptional. The clinic is spotless, timings are respected, and the doctor genuinely cares. I've already referred three friends. 10/10!"</p>
+        <div class="rev-author">
+          <div class="rev-av">AU</div>
+          <div>
+            <div class="rev-name">Ahmed U.</div>
+            <div class="rev-date">Google Review · Verified</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT & HOURS ═══ -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="eyebrow eyebrow-gold">Find Us</div>
+    <div class="display" style="font-size:clamp(28px,3.5vw,42px);margin-bottom:14px;">Hours &amp; <em>Location</em></div>
+    <p style="color:var(--gray);font-size:15px;margin-bottom:48px;">Conveniently located in Wapda Town Phase 2. Evening hours available Mon–Sat.</p>
+    <div class="contact-grid">
+      <div class="hours-panel">
+        <h3>Opening Hours</h3>
+        <table class="hours-tbl">
+          <tr><td class="h-day">Monday</td><td class="h-time h-open">2:00 PM – 10:30 PM</td></tr>
+          <tr><td class="h-day">Tuesday</td><td class="h-time h-open">2:00 PM – 10:30 PM</td></tr>
+          <tr><td class="h-day">Wednesday</td><td class="h-time h-open">2:00 PM – 10:30 PM</td></tr>
+          <tr><td class="h-day">Thursday</td><td class="h-time h-open">2:00 PM – 10:30 PM</td></tr>
+          <tr><td class="h-day">Friday</td><td class="h-time h-open">2:00 PM – 10:30 PM</td></tr>
+          <tr><td class="h-day">Saturday</td><td class="h-time h-open">2:00 PM – 10:30 PM</td></tr>
+          <tr><td class="h-day">Sunday</td><td class="h-time h-closed">Closed</td></tr>
+        </table>
+        <div class="popular-note">
+          🕙 Popular time: around 10 PM on weeknights — book in advance to secure your slot.
+        </div>
+        <p style="margin-top:14px;font-size:13px;color:var(--gray);">⚠️ Hours may vary on public holidays. Please call ahead to confirm.</p>
+      </div>
+      <div class="info-panel">
+        <h3>Contact & Location</h3>
+        <div class="info-row">
+          <div class="info-icon">📞</div>
+          <div>
+            <div class="info-lbl">Phone / WhatsApp</div>
+            <div class="info-val"><a href="tel:03274945469">0327-4945469</a></div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-lbl">Address</div>
+            <div class="info-val">Plot 202, Block N-3<br>Wapda Town Phase 2, Lahore</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">⭐</div>
+          <div>
+            <div class="info-lbl">Google Rating</div>
+            <div class="info-val">5.0 ★ — 134 Reviews</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-icon">📱</div>
+          <div>
+            <div class="info-lbl">Social Media</div>
+            <div class="info-val">
+              <a href="https://www.facebook.com/AlFatimaDentalClinic/" target="_blank">Facebook · 230+ followers</a><br>
+              <a href="https://www.instagram.com/alfatimadentalclinic/" target="_blank">Instagram · @alfatimadentalclinic</a>
+            </div>
+          </div>
+        </div>
+        <div class="cta-stack">
+          <a href="tel:03274945469" class="cta-full cta-gold">📞 Call for Appointment</a>
+          <a href="https://wa.me/923274945469" target="_blank" class="cta-full cta-wa">💬 WhatsApp Us</a>
+          <a href="https://www.facebook.com/AlFatimaDentalClinic/" target="_blank" class="cta-full cta-fb">📘 Follow on Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER ═══ -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="gold-line"></div>
+    <h2>Ready for a healthier,<br><em>more confident smile?</em></h2>
+    <p>Book your appointment today — compassionate care for every member of your family.</p>
+    <div class="cta-pills">
+      <a href="tel:03274945469" class="pill pill-gold">📞 Call 0327-4945469</a>
+      <a href="https://wa.me/923274945469" target="_blank" class="pill pill-ghost">💬 Book via WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" style="text-decoration:none;">
+        <div class="nav-logo-icon">🌙</div>
+        <div class="nav-logo-text">
+          <div class="nl1">Al-Fatima Dental Clinic</div>
+          <div class="nl2">Wapda Town, Lahore</div>
+        </div>
+      </a>
+      <p>Trusted family dental care in Wapda Town Phase 2. Rated a perfect 5.0★ by 134 patients on Google.</p>
+    </div>
+    <div class="f-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Teeth Whitening</a></li>
+        <li><a href="#services">Root Canal</a></li>
+        <li><a href="#services">Dental Implants</a></li>
+        <li><a href="#services">Veneers</a></li>
+        <li><a href="#services">Crowns & Bridges</a></li>
+        <li><a href="#services">Child Dentistry</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>More Services</h4>
+      <ul>
+        <li><a href="#services">Cosmetic Dentistry</a></li>
+        <li><a href="#services">Oral Surgery</a></li>
+        <li><a href="#services">Dentures</a></li>
+        <li><a href="#services">Oral Hygiene</a></li>
+        <li><a href="#services">Fluoride Therapy</a></li>
+        <li><a href="#services">Radiographs</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Clinic</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#reviews">Patient Reviews</a></li>
+        <li><a href="#contact">Hours & Location</a></li>
+        <li><a href="tel:03274945469">0327-4945469</a></li>
+        <li><a href="https://www.facebook.com/AlFatimaDentalClinic/" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com/alfatimadentalclinic/" target="_blank">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Al-Fatima Dental Clinic, Lahore. All rights reserved.</p>
+    <p>Crafted with <span class="accent">♥</span> for healthier smiles</p>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mob-bar">
+  <a href="tel:03274945469" class="mob-call">📞 Call Now</a>
+  <a href="https://wa.me/923274945469" target="_blank" class="mob-wa">💬 WhatsApp</a>
+</div>
+
+</body>
+</html>
